@@ -20,7 +20,6 @@ pink_p.setAttribute('src', './imgs/pink_p.png')
 const pink_s = document.createElement("img");
 pink_s.setAttribute('src', './imgs/pink_s.png')
 
-
 function imgselect(arr) {
     if (arr.cloth === "p" && arr.color === "blue") {
         return blue_p;
@@ -51,6 +50,24 @@ function imgselect(arr) {
     }
 }
 
+function spanfunc(arr) {
+    return `gender: ${arr.gender}, size: ${arr.size}`;
+}
+
+function display(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        ul.appendChild(li_one.cloneNode(true));
+        element[i].appendChild(imgselect(arr[i]).cloneNode());
+        element[i].appendChild(span_one.cloneNode());
+        GenderSize[i].innerHTML = spanfunc(arr[i]);
+    }
+}
+
+function CleanDisplay() {
+    while(ul.firstChild) {
+        ul.removeChild(ul.firstChild);
+    }
+}
 
 const filter_t = document.getElementById("t");
 const filter_p = document.getElementById("p");
@@ -60,92 +77,51 @@ const filter_yellow = document.getElementById("yellow");
 const filter_pink = document.getElementById("pink");
 const ul = document.getElementById("scrolls");
 
-
-
+const span_one = document.createElement("span");
+span_one.setAttribute("class", "GenderSize");
 const div_one = document.createElement("div");
 div_one.setAttribute("class", "element");
 const li_one = document.createElement("li");
 li_one.appendChild(div_one);
 const element = document.getElementsByClassName("element");
+const GenderSize = document.getElementsByClassName("GenderSize");
 
-for (let i = 0; i < jsondata.cloths.length; i++) {
-    ul.appendChild(li_one.cloneNode(true));
-    element[i].appendChild(imgselect(jsondata.cloths[i]).cloneNode());
-}
+display(jsondata.cloths);
 
 filter_t.addEventListener("click", () => {
     const result = jsondata.cloths.filter((list) => list.cloth === 't');
     while(ul.firstChild) {
         ul.removeChild(ul.firstChild);
     }
-    for (let i = 0; i < result.length; i++) {
-        ul.appendChild(li_one.cloneNode(true));
-        element[i].appendChild(imgselect(result[i]).cloneNode());
-    }
-    
+    display(result);
 })
 
 filter_p.addEventListener("click", () => {
     const result = jsondata.cloths.filter((list) => list.cloth === 'p');
-    while(ul.firstChild) {
-        ul.removeChild(ul.firstChild);
-    }
-    for (let i = 0; i < result.length; i++) {
-        ul.appendChild(li_one.cloneNode(true));
-        element[i].appendChild(imgselect(result[i]).cloneNode());
-    }
-
-
+    CleanDisplay();
+    display(result);
 })
 
 filter_s.addEventListener("click", () => {
     const result = jsondata.cloths.filter((list) => list.cloth === 's');
-    while(ul.firstChild) {
-        ul.removeChild(ul.firstChild);
-    }
-    for (let i = 0; i < result.length; i++) {
-        ul.appendChild(li_one.cloneNode(true));
-        element[i].appendChild(imgselect(result[i]).cloneNode());
-    }
-
-
+    CleanDisplay();
+    display(result);
 })
 
 filter_blue.addEventListener("click", () => {
     const result = jsondata.cloths.filter((list) => list.color === 'blue');
-    while(ul.firstChild) {
-        ul.removeChild(ul.firstChild);
-    }
-    for (let i = 0; i < result.length; i++) {
-        ul.appendChild(li_one.cloneNode(true));
-        element[i].appendChild(imgselect(result[i]).cloneNode());
-    }
-
-
+    CleanDisplay();
+    display(result);
 })
 
 filter_yellow.addEventListener("click", () => {
     const result = jsondata.cloths.filter((list) => list.color === 'yellow');
-    while(ul.firstChild) {
-        ul.removeChild(ul.firstChild);
-    }
-    for (let i = 0; i < result.length; i++) {
-        ul.appendChild(li_one.cloneNode(true));
-        element[i].appendChild(imgselect(result[i]).cloneNode());
-    }
-
-
+    CleanDisplay();
+    display(result);
 })
 
 filter_pink.addEventListener("click", () => {
     const result = jsondata.cloths.filter((list) => list.color === 'pink');
-    while(ul.firstChild) {
-        ul.removeChild(ul.firstChild);
-    }
-    for (let i = 0; i < result.length; i++) {
-        ul.appendChild(li_one.cloneNode(true));
-        element[i].appendChild(imgselect(result[i]).cloneNode());
-    }
-
-
+    CleanDisplay();
+    display(result);
 })
