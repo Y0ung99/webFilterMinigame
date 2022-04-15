@@ -1,62 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="after.js" defer></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="module" defer></script>
     <title>Document</title>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <a class="logo" href="index.html"><img src="imgs/logo.png" alt="" /></a>
+        <a class="logo" href="index.html"><img src="imgs/logo.png" alt=""></a>
     </header>
     <nav>
-      <ul class="buttons">
-        <button class="btn">
-          <img
-            src="imgs/blue_t.png"
-            alt="tshirt"
-            id="t"
-            data-key="cloth"
-            data-value="t"
-          />
-        </button>
-
-        <button class="btn">
-          <img
-            src="imgs/blue_p.png"
-            alt="pants"
-            id="p"
-            data-key="cloth"
-            data-value="p"
-          />
-        </button>
-
-        <button class="btn">
-          <img
-            src="imgs/blue_s.png"
-            alt="skirt"
-            id="s"
-            data-key="cloth"
-            data-value="s"
-          />
-        </button>
-
-        <button class="btn" id="blue" data-key="color" data-value="blue">
-          Blue
-        </button>
-        <button class="btn" id="yellow" data-key="color" data-value="yellow">
-          Yellow
-        </button>
-        <button class="btn" id="pink" data-key="color" data-value="pink">
-          Pink
-        </button>
-      </ul>
+        <ul class="button_cloths">
+            <li><button id="t"><img src="imgs/blue_t.png" alt=""></button></li>
+            <li><button id="p"><img src="imgs/blue_p.png" alt=""></button></li>
+            <li><button id="s"><img src="imgs/blue_s.png" alt=""></button></li>
+        </ul>
+        <ul class="button_color">
+            <li><button id="blue">Blue</button></li>
+            <li><button id="yellow">Yellow</button></li>
+            <li><button id="pink">Pink</button></li>
+        </ul>
     </nav>
     <section>
-      <ul id="scrolls"></ul>
+        <ul id="scrolls">
+            
+          
+        </ul>
     </section>
-  </body>
+
+</body>
 </html>
