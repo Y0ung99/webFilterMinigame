@@ -30,13 +30,13 @@ nav > ul {
     align-items: center;
 }
 
-.buttons img {
-    width: 30px;
-    height: 30px;
+nav > ul > li {
+    padding: 0px 5px;
 }
 
-.btn {
-    margin-right: 8px;
+.button_cloths img {
+    width: 30px;
+    height: 30px;
 }
 
 #blue {

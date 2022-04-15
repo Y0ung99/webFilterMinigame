@@ -90,7 +90,9 @@ display(jsondata.cloths);
 
 filter_t.addEventListener("click", () => {
     const result = jsondata.cloths.filter((list) => list.cloth === 't');
-    CleanDisplay();
+    while(ul.firstChild) {
+        ul.removeChild(ul.firstChild);
+    }
     display(result);
 })
 
