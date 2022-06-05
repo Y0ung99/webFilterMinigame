@@ -62,7 +62,7 @@
         {"cloth":"p","color":"blue","gender":"man","size":"small","image":"imgs/blue_p.png"},
         {"cloth":"t","color":"yellow","gender":"woman","size":"big","image":"imgs/yellow_t.png"},
         {"cloth":"s","color":"blue","gender":"man","size":"small","image":"imgs/blue_s.png"},
-        {"cloth":"t","color":"yellow","gender":"woman","size":"medium","image":"imgs/yellow_t.png"}
+        {"cloth":"t","color":"yellow","gender":"woman","size":"medium","image":"imgs/yellow_t.png"},
         {"cloth":"p","color":"blue","gender":"man","size":"small","image":"../imgs/blue_p.png"},
         {"cloth":"t","color":"yellow","gender":"woman","size":"big","image":"../imgs/yellow_t.png"},
         {"cloth":"s","color":"blue","gender":"man","size":"small","image":"../imgs/blue_s.png"},
